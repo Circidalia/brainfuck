@@ -3,8 +3,8 @@
 
 #define OPERATIONS 2048
 
-char	*loopForward(char *args) {
-	short others = 0;
+char	*loopForward(register char *args) {
+	register short others = 0;
 	
 	args++;
 	while (*args != ']' || others) {
@@ -23,8 +23,8 @@ char	*loopForward(char *args) {
 	return (args);
 }
 
-char	*loopBackward(char *args) {
-	short others = 0;
+char	*loopBackward(register char *args) {
+	register short others = 0;
 	
 	args--;
 	while (*args != '[' || others) {
@@ -43,10 +43,10 @@ char	*loopBackward(char *args) {
 	return (args);
 }
 
-void	brainfuck(char *args) {
-	unsigned char *ptr = (unsigned char *)malloc(sizeof(unsigned char) * OPERATIONS);
-	unsigned char *t = ptr;
-	short i = 0;
+void	brainfuck(register char *args) {
+	register unsigned char *ptr = (unsigned char *)malloc(sizeof(unsigned char) * OPERATIONS);
+	register unsigned char *t = ptr;
+	register short i = 0;
 	
 	while (i < OPERATIONS) {
 		ptr[i] = 0;
@@ -84,7 +84,6 @@ void	brainfuck(char *args) {
 }
 
 int		main(int argc, char **argv) {
-	
 	if (argc == 2) brainfuck(argv[1]);
 	return (0);
 }
