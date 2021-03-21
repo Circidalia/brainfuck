@@ -4,7 +4,7 @@
 
 #define OPERATIONS 2048
 
-register uint8_t	*loopForward(register uint8_t *args) {
+uint8_t	*loopForward(register uint8_t *args) {
 	register uint16_t others = 0;
 	
 	args++;
@@ -24,7 +24,7 @@ register uint8_t	*loopForward(register uint8_t *args) {
 	return (args);
 }
 
-register uint8_t	*loopBackward(register uint8_t *args) {
+uint8_t	*loopBackward(register uint8_t *args) {
 	register uint16_t others = 0;
 	
 	args--;
@@ -44,7 +44,7 @@ register uint8_t	*loopBackward(register uint8_t *args) {
 	return (args);
 }
 
-void			brainfuck(register uint8_t *args) {
+void	brainfuck(register uint8_t *args) {
 	register uint8_t *ptr = (uint8_t *)malloc(sizeof(uint8_t) * OPERATIONS);
 	register uint8_t *t = ptr;
 	register uint16_t i = 0;
@@ -84,7 +84,7 @@ void			brainfuck(register uint8_t *args) {
 	free(t);
 }
 
-int			main(int argc, char **argv) {
+int	main(int argc, char **argv) {
 	if (argc == 2) brainfuck((uint8_t *)(argv[1]));
 	return (0);
 }
