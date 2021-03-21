@@ -4,19 +4,24 @@ brainfuck interpreter...
 this interpreter has NO protection
 
 #### COMPILE
-	`gcc main.c -o brainfuck`
+
+`gcc main.c -o brainfuck`
 
 #### RUN
-	 `./brainfuck "INPUT"`
+
+`./brainfuck "INPUT"`
   
 #### EXAMPLE CODE
-	http://www.hevanet.com/cristofd/brainfuck/
+
+http://www.hevanet.com/cristofd/brainfuck/
 
 #### MORE INFO
-	https://en.wikipedia.org/wiki/Brainfuck
-	
-	https://www.muppetlabs.com/~breadbox/bf/
+
+https://en.wikipedia.org/wiki/Brainfuck
+
+https://www.muppetlabs.com/~breadbox/bf/
   
 #### TEXT TO BRAINFUCK
-	https://copy.sh/brainfuck/text.html
+
+https://copy.sh/brainfuck/text.html
   
