@@ -15,13 +15,12 @@ this interpreter has NO protection
 
 http://www.hevanet.com/cristofd/brainfuck/
 
+#### TEXT TO BRAINFUCK
+
+https://copy.sh/brainfuck/text.html
+
 #### MORE INFO
 
 https://en.wikipedia.org/wiki/Brainfuck
 
 https://www.muppetlabs.com/~breadbox/bf/
-  
-#### TEXT TO BRAINFUCK
-
-https://copy.sh/brainfuck/text.html
-  
