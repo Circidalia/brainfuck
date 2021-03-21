@@ -6,7 +6,7 @@
 char	*loopForward(char *args) {
 	short others = 0;
 	
-	++args;
+	args++;
 	while (*args != ']' || others) {
 		switch (*args) {
 			case '[':
@@ -18,7 +18,7 @@ char	*loopForward(char *args) {
 			default:
 				break;
 		}
-		++args;
+		args++;
 	}
 	return (args);
 }
@@ -26,7 +26,7 @@ char	*loopForward(char *args) {
 char	*loopBackward(char *args) {
 	short others = 0;
 	
-	--args;
+	args--;
 	while (*args != '[' || others) {
 		switch (*args) {
 			case ']':
@@ -38,7 +38,7 @@ char	*loopBackward(char *args) {
 			default:
 				break;
 		}
-		--args;
+		args--;
 	}
 	return (args);
 }
@@ -70,12 +70,10 @@ void	brainfuck(char *args) {
 				write(1, ptr, 1);
 				break;
 			case '[':
-				if (!(*ptr))
-					args = loopForward(args);
+				if (!(*ptr)) args = loopForward(args);
 				break;
 			case ']':
-				if (*ptr)
-					args = loopBackward(args);
+				if (*ptr) args = loopBackward(args);
 				break;
 			default:
 				break;
@@ -87,10 +85,6 @@ void	brainfuck(char *args) {
 
 int		main(int argc, char **argv) {
 	
-	if (argc == 2) {
-		brainfuck(argv[1]);
-	} else {
-		write(1, "\n", 1);
-	}
+	if (argc == 2) brainfuck(argv[1]);
 	return (0);
 }
