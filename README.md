@@ -1,20 +1,22 @@
 # brainfuck
 brainfuck interpreter...
+
 this interpreter has NO protection
 
-COMPILE:
-	gcc main.c -o brainfuck
+#### COMPILE
+	`gcc main.c -o brainfuck`
 
-RUN:
-	./brainfuck "INPUT"
+#### RUN
+	 `./brainfuck "INPUT"`
   
-EXAMPLE CODE:
+#### EXAMPLE CODE
 	http://www.hevanet.com/cristofd/brainfuck/
 
-MORE INFO:
+#### MORE INFO
 	https://en.wikipedia.org/wiki/Brainfuck
+	
 	https://www.muppetlabs.com/~breadbox/bf/
   
-TEXT TO BRAINFUCK:
+#### TEXT TO BRAINFUCK
 	https://copy.sh/brainfuck/text.html
   
