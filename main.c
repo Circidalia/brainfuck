@@ -85,6 +85,6 @@ void	brainfuck(register uint8_t *args) {
 }
 
 int		main(int argc, char **argv) {
-	if (argc == 2) brainfuck((uint8_t)(argv[1]));
+	if (argc == 2) brainfuck((uint8_t *)(argv[1]));
 	return (0);
 }
