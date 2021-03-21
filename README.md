@@ -1,7 +1,7 @@
 # brainfuck
 brainfuck interpreter...
 
-this interpreter has NO protection
+this interpreter has ZERO protection
 
 #### COMPILE
 
