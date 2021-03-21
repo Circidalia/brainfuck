@@ -1,10 +1,11 @@
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #define OPERATIONS 2048
 
-char	*loopForward(register char *args) {
-	register short others = 0;
+uint8_t	*loopForward(register uint8_t *args) {
+	register uint16_t others = 0;
 	
 	args++;
 	while (*args != ']' || others) {
@@ -23,8 +24,8 @@ char	*loopForward(register char *args) {
 	return (args);
 }
 
-char	*loopBackward(register char *args) {
-	register short others = 0;
+uint8_t	*loopBackward(register uint8_t *args) {
+	register uint16_t others = 0;
 	
 	args--;
 	while (*args != '[' || others) {
@@ -43,10 +44,10 @@ char	*loopBackward(register char *args) {
 	return (args);
 }
 
-void	brainfuck(register char *args) {
-	register unsigned char *ptr = (unsigned char *)malloc(sizeof(unsigned char) * OPERATIONS);
-	register unsigned char *t = ptr;
-	register short i = 0;
+void	brainfuck(register uint8_t *args) {
+	register uint8_t *ptr = (uint8_t *)malloc(sizeof(uint8_t) * OPERATIONS);
+	register uint8_t *t = ptr;
+	register uint16_t i = 0;
 	
 	while (i < OPERATIONS) {
 		ptr[i] = 0;
@@ -84,6 +85,6 @@ void	brainfuck(register char *args) {
 }
 
 int		main(int argc, char **argv) {
-	if (argc == 2) brainfuck(argv[1]);
+	if (argc == 2) brainfuck((uint8_t)(argv[1]));
 	return (0);
 }
