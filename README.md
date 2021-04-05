@@ -1,8 +1,6 @@
 # brainfuck
 brainfuck interpreter...
 
-this interpreter has ZERO protection
-
 #### COMPILE
 
 `gcc main.c -o brainfuck`
