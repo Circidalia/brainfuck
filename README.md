@@ -1,5 +1,5 @@
 # brainfuck
-brainfuck interpreter...
+brainfuck interpreter
 
 #### COMPILE
 
